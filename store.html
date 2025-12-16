@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Modded Apps Store</title>
+    <link rel="icon" type="image/png" href="favicon.png"> 
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const token = localStorage.getItem('sessionToken');
+            
+            // 1. Check for Authentication Token
+            if (!token) {
+                // If the token is missing, redirect to the login page
+                localStorage.removeItem('username'); 
+                window.location.href = 'index.html'; 
+            }
+            
+            // 2. Set up the Logout function and dynamic username display
+            const username = localStorage.getItem('username') || 'Client';
+            const welcomeLink = document.getElementById('welcome-link');
+            
+            if (welcomeLink) {
+                welcomeLink.textContent = `Welcome, ${username}! (Logout)`;
+                welcomeLink.onclick = function() {
+                    // Client-side logout function
+                    localStorage.removeItem('sessionToken');
+                    localStorage.removeItem('username');
+                    window.location.href = 'index.html';
+                    return false;
+                };
+            }
+        });
+    </script>
+
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="store_style.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="header-logo">
+            <img src="icon.png" alt="Store Logo" class="logo-img">
+        </div>
+        
+        <nav>
+            <a href="index.html">Login/Register</a>
+            <a href="store.html">Products</a>
+            <a href="#" id="welcome-link" style="color: #25D366;">Welcome Back!</a> 
+        </nav>
+    </header>
+
+    <main class="product-grid-container">
+        
+        <section class="how-it-works">
+            <h2>Your Three-Step Secure Access</h2>
+            <div class="steps-grid">
+                
+                <div class="step-card">
+                    <span class="step-number">1</span>
+                    <h3>Select & Contact</h3>
+                    <p>Browse the apps below and click **Buy Now**. This automatically opens a WhatsApp chat with your order request pre-filled.</p>
+                </div>
+                
+                <div class="step-card">
+                    <span class="step-number">2</span>
+                    <h3>Confirm & Pay</h3>
+                    <p>I will confirm the order details and provide you with the necessary M-Pesa or bank payment information.</p>
+                </div>
+                
+                <div class="step-card">
+                    <span class="step-number">3</span>
+                    <h3>Receive & Enjoy</h3>
+                    <p>Once payment is confirmed, you will immediately receive the secure link or file (APK/VPN config) directly in your chat.</p>
+                </div>
+                
+            </div>
+        </section>
+        
+        <h2>🔥 Premium Features Unlocked 🔥</h2>
+        <p class="store-intro">All apps below are fully unlocked with premium features. Click "Buy Now" to start a direct chat on WhatsApp with your order details.</p>
+
+        <section class="product-grid">
+
+            <div class="product-card">
+                <h3 class="product-title">YouTube Premium MOD</h3>
+                <p class="product-desc">Watch videos ad-free, download videos, and enable background playback.</p>
+                <div class="price-section">
+                    <span class="price">KES 400</span>
+                    <span class="frequency">/ Month</span>
+                </div>
+                <a 
+                    class="buy-button"
+                    href="https://wa.me/254712153539?text=Hello,%20I%20want%20to%20buy%20the%20YouTube%20Premium%20MOD%20(KES%20400)."
+                    target="_blank"
+                >
+                    Buy Now
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">YouTube Music Premium MOD</h3>
+                <p class="product-desc">Ad-free music streaming, background listening, and high-quality audio.</p>
+                <div class="price-section">
+                    <span class="price">KES 350</span>
+                    <span class="frequency">/ Month</span>
+                </div>
+                <a 
+                    class="buy-button"
+                    href="https://wa.me/254712153539?text=Hello,%20I%20want%20to%20buy%20the%20YouTube%20Music%20Premium%20MOD%20(KES%20350)."
+                    target="_blank"
+                >
+                    Buy Now
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">Telegram Premium MOD</h3>
+                <p class="product-desc">Double limits, faster downloads, voice-to-text conversion, and unique stickers.</p>
+                <div class="price-section">
+                    <span class="price">KES 300</span>
+                    <span class="frequency">/ Month</span>
+                </div>
+                <a 
+                    class="buy-button"
+                    href="https://wa.me/254712153539?text=Hello,%20I%20want%20to%20buy%20the%20Telegram%20Premium%20MOD%20(KES%20300)."
+                    target="_blank"
+                >
+                    Buy Now
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">Lightroom Premium MOD</h3>
+                <p class="product-desc">Access to all premium brushes, selective adjustments, and cloud storage features.</p>
+                <div class="price-section">
+                    <span class="price">KES 700</span>
+                    <span class="frequency">/ One-Time</span>
+                </div>
+                <a 
+                    class="buy-button"
+                    href="https://wa.me/254712153539?text=Hello,%20I%20want%20to%20buy%20the%20Lightroom%20Premium%20MOD%20(KES%20700)."
+                    target="_blank"
+                >
+                    Buy Now
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">XRecorder PRO MOD</h3>
+                <p class="product-desc">Record high-quality video without watermarks or time limits. Fully unlocked.</p>
+                <div class="price-section">
+                    <span class="price">KES 400</span>
+                    <span class="frequency">/ One-Time</span>
+                </div>
+                <a 
+                    class="buy-button"
+                    href="https://wa.me/254712153539?text=Hello,%20I%20want%20to%20buy%20the%20XRecorder%20PRO%20MOD%20(KES%20400)."
+                    target="_blank"
+                >
+                    Buy Now
+                </a>
+            </div>
+            
+            <div class="product-card">
+                <h3 class="product-title">CapCut PRO MOD</h3>
+                <p class="product-desc">Access all professional video editing templates, effects, and resources.</p>
+                <div class="price-section">
+                    <span class="price">KES 500</span>
+                    <span class="frequency">/ One-Time</span>
+                </div>
+                <a 
+                    class="buy-button"
+                    href="https://wa.me/254712153539?text=Hello,%20I%20want%20to%20buy%20the%20CapCut%20PRO%20MOD%20(KES%20500)."
+                    target="_blank"
+                >
+                    Buy Now
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">Spotify Premium MOD</h3>
+                <p class="product-desc">Ad-free listening, unlimited skips, and playback unlocked.</p>
+                <div class="price-section">
+                    <span class="price">KES 450</span>
+                    <span class="frequency">/ Month</span>
+                </div>
+                <a 
+                    class="buy-button"
+                    href="https://wa.me/254712153539?text=Hello,%20I%20want%20to%20buy%20the%20Spotify%20Premium%20MOD%20(KES%20450)."
+                    target="_blank"
+                >
+                    Buy Now
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">Audiomack Premium MOD</h3>
+                <p class="product-desc">Stream and download music offline with no advertisements.</p>
+                <div class="price-section">
+                    <span class="price">KES 350</span>
+                    <span class="frequency">/ Month</span>
+                </div>
+                <a 
+                    class="buy-button"
+                    href="https://wa.me/254712153539?text=Hello,%20I%20want%20to%20buy%20the%20Audiomack%20Premium%20MOD%20(KES%20350)."
+                    target="_blank"
+                >
+                    Buy Now
+                </a>
+            </div>
+            
+            <div class="product-card">
+                <h3 class="product-title">PhotoRoom PRO MOD</h3>
+                <p class="product-desc">Instant background removal, batch editor, and full creative control.</p>
+                <div class="price-section">
+                    <span class="price">KES 600</span>
+                    <span class="frequency">/ One-Time</span>
+                </div>
+                <a 
+                    class="buy-button"
+                    href="https://wa.me/254712153539?text=Hello,%20I%20want%20to%20buy%20the%20PhotoRoom%20PRO%20MOD%20(KES%20600)."
+                    target="_blank"
+                >
+                    Buy Now
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">Picsart GOLD MOD</h3>
+                <p class="product-desc">Unlock all premium effects, stickers, fonts, and editing tools.</p>
+                <div class="price-section">
+                    <span class="price">KES 550</span>
+                    <span class="frequency">/ One-Time</span>
+                </div>
+                <a 
+                    class="buy-button"
+                    href="https://wa.me/254712153539?text=Hello,%20I%20want%20to%20buy%20the%20Picsart%20GOLD%20MOD%20(KES%20550)."
+                    target="_blank"
+                >
+                    Buy Now
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">InShot PRO MOD</h3>
+                <p class="product-desc">Full access to video effects, filters, transitions, and export without watermark.</p>
+                <div class="price-section">
+                    <span class="price">KES 500</span>
+                    <span class="frequency">/ One-Time</span>
+                </div>
+                <a 
+                    class="buy-button"
+                    href="https://wa.me/254712153539?text=Hello,%20I%20want%20to%20buy%20the%20InShot%20PRO%20MOD%20(KES%20500)."
+                    target="_blank"
+                >
+                    Buy Now
+                </a>
+            </div>
+
+            <div class="product-card">
+                <h3 class="product-title">TikTok Premium MOD</h3>
+                <p class="product-desc">Enhanced features, region unlocking, and higher quality uploads.</p>
+                <div class="price-section">
+                    <span class="price">KES 400</span>
+                    <span class="frequency">/ One-Time</span>
+                </div>
+                <a 
+                    class="buy-button"
+                    href="https://wa.me/254712153539?text=Hello,%20I%20want%20to%20buy%20the%20TikTok%20Premium%20MOD%20(KES%20400)."
+                    target="_blank"
+                >
+                    Buy Now
+                </a>
+            </div>
+
+            <div class="product-card more-apps">
+                <h3 class="product-title">Need Something Else?</h3>
+                <p class="product-desc">If the app you need isn't listed, contact us directly for availability and pricing.</p>
+                <div class="price-section">
+                    <span class="price">Custom Order</span>
+                </div>
+                <a 
+                    class="buy-button"
+                    href="https://wa.me/254712153539?text=Hello,%20I%20am%20looking%20for%20a%20modded%20app%20not%20listed%20on%20your%20site."
+                    target="_blank"
+                    style="background-color: #555;"
+                >
+                    Inquire Now
+                </a>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>

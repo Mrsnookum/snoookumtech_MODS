@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Mods & VPNs - Secure Access</title>
+    <link rel="icon" type="image/png" href="favicon.png"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container" id="container">
+    
+        <div class="form-container sign-up-container">
+            <form id="registerForm"> 
+                <h1>Join the Premium Club</h1>
+                <div class="message-area" id="registerMessage"></div> 
+                <span>Unlock Modded Apps and VPN Access Instantly</span>
+                <input type="text" placeholder="Name" name="name" required /> 
+                <input type="email" placeholder="Email" name="email" required /> 
+                <input type="password" placeholder="Password" name="password" required /> 
+                <button type="submit">Unlock Premium</button> 
+            </form>
+        </div>
+
+        <div class="form-container sign-in-container">
+            <form id="loginForm"> 
+                <h1>Welcome Back</h1>
+                <div class="message-area" id="loginMessage"></div> 
+                <span>Access your private store account</span>
+                <input type="email" placeholder="Email" name="email" required /> 
+                <input type="password" placeholder="Password" name="password" required /> 
+                <a href="#" id="forgotPasswordLink">Forgot your password?</a>
+                <button type="submit">Sign In to Store</button> 
+            </form>
+        </div>
+        
+        <div class="overlay-container">
+            <div class="overlay">
+                
+                <div class="overlay-panel overlay-left">
+                    <img src="icon.png" alt="Premium Mods Logo" class="overlay-logo">
+                    <h1>Ready to Download?</h1>
+                    <p>Log in to view our full catalog of premium modded apps and VPN configurations.</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                
+                <div class="overlay-panel overlay-right">
+                    <img src="icon.png" alt="Premium Mods Logo" class="overlay-logo">
+                    <h1>GET UNLOCKED APPS!</h1>
+                    <p>Sign up now to access YouTube Premium, CapCut PRO, Lightroom, and many more exclusive files!</p>
+                    <button class="ghost" id="signUp">Register Now</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="reset-overlay" id="resetOverlay">
+        <div class="reset-form-container">
+            <h2>Password Reset</h2>
+            <div class="message-area" id="resetMessage"></div> 
+
+            <form id="resetRequestForm">
+                <p>Enter your account email to receive a 6-digit reset code.</p>
+                <input type="email" placeholder="Registered Email" name="email" id="requestEmailInput" required />
+                <button type="submit">Send Reset Code</button>
+                <button type="button" id="cancelReset" class="ghost">Cancel</button>
+            </form>
+
+            <form id="resetPasswordForm" style="display: none;">
+                <p>Code received! Please enter it below with your new password.</p>
+                <input type="email" placeholder="Email (Pre-filled)" name="email" id="resetEmail" readonly required />
+                <input type="text" placeholder="6-Digit Reset Code" name="code" required />
+                <input type="password" placeholder="New Password" name="newPassword" required />
+                <button type="submit">Change Password</button>
+                <button type="button" id="closeReset" class="ghost">Cancel</button>
+            </form>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
